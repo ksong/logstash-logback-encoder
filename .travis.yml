@@ -1,1 +1,11 @@
 language: java
+
+cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/.starts
+    - $TRAVIS_BUILD_DIR/jdeps-cache
+
+script:
+  - echo "=========STARTS INTEGRATION BLOCK=========="
+  - time mvn starts:starts
+  - echo "=========STARTS INTEGRATION BLOCK=========="
